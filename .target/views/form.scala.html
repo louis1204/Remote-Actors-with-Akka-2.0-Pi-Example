@@ -1,0 +1,40 @@
+@(optionsForm: Form[Options])
+
+@import helper._
+
+@main(Html("Calculate Pi")) {
+    
+    <h2>Calculate Pi</h2>
+    
+    @helper.form(action = routes.Pi.submit) {
+        
+        <fieldset>
+            <legend>Pi Options</legend>
+            
+            @inputText(
+                optionsForm("numWorkers"), 
+                '_label -> "Number of Workers", 
+                '_help -> "Please choose a valid number > 0"
+            )
+            
+            @inputText(
+                optionsForm("numElements"), 
+                '_label -> "Number of Elements", 
+                '_help -> "Please choose a valid number > 0"
+            )            
+            
+            @inputText(
+                optionsForm("numMessages"), 
+                '_label -> "Number of Messages", 
+                '_help -> "Please choose a valid number > 0"
+            )
+            
+            
+        </fieldset>
+
+        <div class="actions">
+            <input type="submit" class="btn primary" value="Submit">
+            <a href="@routes.Application.index" class="btn">Cancel</a>
+        </div>
+        }
+}

@@ -1,0 +1,37 @@
+@(title: Html, nav: String = "")(content: Html)
+@import helper._
+ 
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Form samples</title>
+    </head>
+    <body>
+
+        <div class="container">
+
+            <div class="content">
+                
+                <div class="page-header">
+                    <h1>@title</h1>
+                </div>
+
+                <div class="row">
+                    <div class="span14">
+                        @content
+                    </div>
+                </div>
+                
+            </div>
+
+            <footer>
+                <p>
+                    <a href="http://www.ziftit.com">www.ziftit.com</a>
+                </p>
+            </footer>
+
+        </div>
+        
+    </body>
+</html>
